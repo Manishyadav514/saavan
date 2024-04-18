@@ -17,3 +17,11 @@ function playPause() {
 audioTrack.addEventListener("ended", function () {
     controlBtn.className = "play";
 });
+
+
+
+function togglePopup() {
+    var popup = document.getElementById("popup");
+    popup.classList.toggle("show");
+}
+

@@ -1,0 +1,38 @@
+[
+  {
+    "song_name": "Equinox",
+    "song_author": "Unknown",
+    "song_image": "./media/Equinox-Unknown-2023-20230728044702-150x150.jpg",
+    "song_url": "https://www.jiosaavn.com/album/equinox/bp2ai3qTIbo_"
+  },
+  {
+    "song_name": "cold/mess",
+    "song_author": "English",
+    "song_image": "./media/cold-mess-English-2020-20201004113231-150x150.jpg",
+    "song_url": "https://www.jiosaavn.com/album/coldmess/iMuxuTMIass_"
+  },
+  {
+    "song_name": "Ye Mera Deewanapan Hai (Remix)",
+    "song_author": "Hindi",
+    "song_image": "./media/Ye-Mera-Deewanapan-Hai-Remix-Hindi-2022-20220914213939-150x150.jpg",
+    "song_url": "https://www.jiosaavn.com/album/ye-mera-deewanapan-hai-remix/aHhe3USsuz4_"
+  },
+  {
+    "song_name": "Desi English Pop",
+    "song_author": "Unknown",
+    "song_image": "./media/NowPlayingPopIndia_20221102110853_150x150.jpg",
+    "song_url": "https://www.jiosaavn.com/featured/desi-english-pop/8kmBbCvw-mOO0eMLZZxqsA__"
+  },
+  {
+    "song_name": "Wo Ajnabee",
+    "song_author": "Hindi",
+    "song_image": "./media/The-Train-Hindi-2007-20221206121907-150x150.jpg",
+    "song_url": "https://www.jiosaavn.com/song/wo-ajnabee/CEUzfi5IQWQ"
+  },
+  {
+    "song_name": "Ophelia",
+    "song_author": "English",
+    "song_image": "./media/Ophelia-English-2016-150x150.jpg",
+    "song_url": "https://www.jiosaavn.com/song/ophelia/FSMcWjthGmY"
+  }
+]

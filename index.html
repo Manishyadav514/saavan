@@ -9,6 +9,7 @@
   <title>Online Songs on JioSaavn: Download &amp; Play Latest Music for Free</title>
   <meta name="subtitle" content="Listen to New Hindi Songs Online Only on JioSaavn.">
   <meta name="author" content="JioSaavn">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -36,6 +37,7 @@
         </div>
       </div>
     </div>
+
     <div class="home">
       <header class="c-header u-clearfix">
         <div class="o-layout o-layout--middle">
@@ -323,6 +325,7 @@
                   <h2 class="u-h3 u-margin-bottom-none@sm">Hi There, Manish Yadav.</h2>
                   <h3 class="u-subhead">Recently Played</h3>
                 </header>
+
                 <div class="c-rotator">
                   <div class="c-rotator__container">
                     <div class="c-rotator__content">
@@ -8144,15 +8147,17 @@
             <!-- play pause button -->
 
 
-            <li id="player-container">
+            <li class="player-container">
               <ul id="play-pause-button" class="play" onclick="playPause()">.</ul>
             </li>
+            <!-- <li id="player-container"><span id="play-pause-button" class="play" onclick="playPause()">.</span> </li> -->
 
             <li class="c-player__btn c-player__btn-next"><span id="player_next"
                 class="o-icon-next o-icon--xlarge"></span> </li>
             <li class="c-player__btn c-player__btn--shift c-player__btn-action2"><span id="player_shuffle"
                 class="o-icon-shuffle o-icon--xlarge"></span></li>
           </ul>
+          <div class="flex flex-row gap-2"></div>
           <audio id="audioTrack">
             <source src="/song/ophelia.mp3" type="audio/mpeg" />
           </audio>
@@ -8625,6 +8630,16 @@
         </div>
       </div>
       <div class="c-toast"></div>
+    </div>
+  </div>
+  <div class="accessibility-icon">
+    <!-- <button onclick="togglePopup()" id="accessibility-icon"></button> -->
+    <img src="./media/accessibility.png" alt="button" type="button" onclick="togglePopup()" id="accessibility-icon" />
+  </div>
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <!-- Add your accessibility options here -->
+      <p>This is the accessibility popup</p>
     </div>
   </div>
   <div class="plyr plyr--full-ui plyr--audio plyr--html5 plyr--playing">
