@@ -22,7 +22,7 @@
 
 .accessibility-icon {
     position: fixed;
-    bottom: 100px;
+    top: 70px;
     right: 100px;
     z-index: 9999;
     /* background-color: rgba(117, 4, 4, 0.919); */
