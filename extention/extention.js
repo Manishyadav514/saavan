@@ -24,7 +24,6 @@ function createImageButton(parentElement) {
 // open popup
 function togglePopup() {
     var popupContainerDiv = document.getElementById("wcag-popup-container");
-    console.log(popupContainerDiv, popupContainerDiv.style.visibility, popupContainerDiv.style.visibility === "hidden")
     if (popupContainerDiv.style.visibility === "hidden") {
         popupContainerDiv.style.visibility = 'visible';
     } else {
@@ -67,27 +66,25 @@ function loadHTML() {
 function replaceImages() {
     const images = document.querySelectorAll('img');
     images.forEach(img => {
-      const dummyBackground = document.createElement('div');
-      dummyBackground.style.backgroundColor = 'white';
-      dummyBackground.style.width = img.width + 'px';
-      dummyBackground.style.height = img.height + 'px';
-      dummyBackground.style.display = 'inline-block';
-      img.parentNode.replaceChild(dummyBackground, img);
+        if (!img.classList.contains('wcag-buttonImg')) {
+            img.setAttribute('aria-hidden', 'true');
+            img.style.visibility = img.style.visibility === 'hidden' ? 'visible' : 'hidden';
+        }
     });
-  }
-  function mutePlayingAudio() {
+    document.getElementById("wcag-image-remove").classList.toggle("active");
+}
+
+
+function mutePlayingAudio() {
     const audioElements = document.querySelectorAll('audio');
     audioElements.forEach(audio => {
-      if (!audio.paused && audio.currentTime > 0 && !audio.ended) {
-        audio.muted = true;
-      }
+        if (!audio.paused && audio.currentTime > 0 && !audio.ended) {
+            audio.muted = true;
+        }
     });
-  }
-  
-  // Call the function to mute playing audio
-  mutePlayingAudio();
-  
-  
+    document.getElementById("wcag-audio-mute").classList.toggle("active");
+}
+
 // Call functions to create elements and load CSS
 createWidget();
 loadCSS();
