@@ -38,7 +38,7 @@ function createPopup(parentElement) {
     const popupContainer = document.createElement('div');
     popupContainer.classList.add('wcag-popup-container'); // Add a class to the popup container
     popupContainer.id = "wcag-popup-container";
-    popupContainer.style.visibility = "visible"
+    popupContainer.style.visibility = "hidden"
     parentElement.appendChild(popupContainer);
 }
 
