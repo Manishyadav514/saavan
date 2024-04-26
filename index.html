@@ -390,7 +390,7 @@
                                     <button onclick="playMusicById('equinox')" aria-label="Play Equinox">
                                       <i class="o-icon-play o-icon--large"></i>
                                     </button>
-                                  </span>span
+                                  </span><span
                                     class="o-block__like"><i class="o-icon--large u-pop-in o-icon-follow"></i></span><span
                                     class="o-block__menu c-btn-overflow"><i class="o-icon-ellipsis o-icon--large"></i></span></div><a
                                   event_item="[object Object]" title="Equinox" class="o-block__link"><img
@@ -8111,11 +8111,11 @@
             <div class="c-progress__track">
               <div id="audio-progress-view" class="c-progress__seek" style="width: 194px;"></div>
               <input type="range" id="audio-progress-bar" class="form-range"
-                style="position: absolute; width: 100%; top: 0; left: 0; height: 100%; opacity: 0; cursor: pointer;">
+                style="position: absolute; width: 100%; top: 0; left: 0; height: 100%; opacity: 0; cursor: pointer;"
+                aria-label="Audio progress bar">
               <div class="c-progress__knob"></div>
             </div>
           </section>
-
           <figure id="album-details" class="c-player__current o-flag o-flag--small o-flag--mini o-flag--thumbnail@lg">
             <div class="o-flag__img"><a screen_name="player_screen" event_item="[object Object]" title="Lutt Putt Gaya"
                 class="" href="https://www.jiosaavn.com/song/lutt-putt-gaya/SRgDaxUGelA"><img id="album-image"
@@ -8131,34 +8131,41 @@
           </figure>
           <ul class="c-player__actions">
             <li class="c-player__btn u-visible-visually@lg">
-              <span class="u-centi u-valign-text-bottom u-padding-horizontal-small@sm"
-                id="audio-current-time">0.00</span>
+              <span class="u-centi u-valign-text-bottom u-padding-horizontal-small@sm" id="audio-current-time">0.00</span>
               /
               <span class="u-centi u-valign-text-bottom u-padding-horizontal-small@sm" id="audio-duration">0.00</span>
             </li>
             <li class="c-player__btn u-visible-visually@lg"><span id="player_ellipsis"
                 class="o-icon-ellipsis o-icon--xlarge u-valign-bottom c-btn-overflow"></span></li>
-            <li class="c-player__btn u-visible-visually@lg">
-              <span class="c-slider"><span id="audio-volume" class="o-icon-volume o-icon--huge">
-                </span>
-                <div
-                  class="cursor-pointer z-50 fixed bottom-[150px] right-[100px] -rotate-90 border-2 border-black rounded-full">
-                  <input type="range" id="audio-volume-bar" max="100" value="100" class="form-range">
-                </div>
-            </li>
-            <li class="c-player__btn c-player__btn-toggle u-visible-visually@lg"><span id="player_expand"
+                <li class="c-player__btn u-visible-visually@lg">
+                  <span class="c-slider">
+                    <button id="audio-volume" class="o-icon-volume o-icon--huge" aria-label="mute/Unmute"></button>
+                  </span>
+                  <div class="cursor-pointer z-50 fixed bottom-[150px] right-[100px] -rotate-90 border-2 border-black rounded-full">
+                    <input type="range" id="audio-volume-bar" max="100" value="100" class="form-range" aria-label="Volume slider">
+                  </div>
+                </li>
+                <li class="c-player__btn c-player__btn-toggle u-visible-visually@lg"><span id="player_expand"
                 class="o-icon-expand o-icon--xlarge"></span></li>
           </ul>
           <ul class="c-player__controls u-margin-bottom-none@sm" id="audioControlDiv">
             <li class="c-player__btn c-player__btn--shift c-player__btn-action1"><span id="player_repeat"
                 class="o-icon-repeat o-icon--xlarge"></span></li>
-            <li class="c-player__btn c-player__btn-prev"><span id="prevButton"
-                class="o-icon-previous o-icon--xlarge"></span> </li>
-            <li class="c-player__btn text-3xl w-4" id="playPauseButton">
-              <i class="fa-solid fa-play"></i>
-            </li>
-            <li class="c-player__btn c-player__btn-next"><span id="nextButton"
-                class="o-icon-next o-icon--xlarge"></span> </li>
+                <li class="c-player__btn c-player__btn-prev">
+                  <button id="prevButton" aria-label="Previous">
+                    <span class="o-icon-previous o-icon--xlarge"></span>
+                  </button>
+                </li>
+                <li class="c-player__btn text-3xl w-4" id="playPauseButton">
+                  <button aria-label="Play/Pause">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                </li>
+                <li class="c-player__btn c-player__btn-next">
+                  <button id="nextButton" aria-label="Next">
+                    <span class="o-icon-next o-icon--xlarge"></span>
+                  </button>
+                </li>
             <li class="c-player__btn c-player__btn--shift c-player__btn-action2"><span id="player_shuffle"
                 class="o-icon-shuffle o-icon--xlarge"></span></li>
           </ul>
@@ -8167,7 +8174,8 @@
             <source src="/mp3/ophelia.mp3" type="audio/mpeg" />
           </audio>
         </div>
-        <div class="c-player__header">
+      </div>
+            <div class="c-player__header">
           <div class="o-layout o-layout--middle">
             <div class="o-layout__item u-2/7"><span class="u-color-js-gray"><i
                   class="o-icon-close o-icon--large"></i></span></div>
