@@ -106,6 +106,7 @@ function toggleADHDMode() {
     } else {
         disableADHDMode();
     }
+    document.getElementById("wcag-adhd-mode").classList.toggle("active");
 }
 
 
