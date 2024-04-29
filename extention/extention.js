@@ -85,6 +85,54 @@ function mutePlayingAudio() {
     document.getElementById("wcag-audio-mute").classList.toggle("active");
 }
 
+
+
+
+
+
+
+//Mine
+
+let adhdOverlay;
+let adhdModeEnabled = false;
+
+
+function toggleADHDMode() {
+    adhdModeEnabled = !adhdModeEnabled;
+    document.body.classList.toggle('adhd-mode');
+
+    if (adhdModeEnabled) {
+        enableADHDMode();
+    } else {
+        disableADHDMode();
+    }
+}
+
+
+
+function enableADHDMode() {
+    adhdOverlay = document.createElement('div');
+    adhdOverlay.classList.add('adhd-overlay');
+    document.body.appendChild(adhdOverlay);
+    adhdOverlay.classList.add('active');
+
+    document.addEventListener('mousemove', updateADHDOverlay);
+}
+
+function disableADHDMode() {
+    document.removeEventListener('mousemove', updateADHDOverlay);
+    adhdOverlay.remove();
+}
+
+
+function updateADHDOverlay(event) {
+    adhdOverlay.style.top = `${event.clientY - 50}px`; // Center the overlay vertically
+    adhdOverlay.style.left = '0'; // Position the overlay at the left edge of the screen
+}
+
+
+
+
 // Call functions to create elements and load CSS
 createWidget();
 loadCSS();
