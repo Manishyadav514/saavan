@@ -263,3 +263,60 @@ body.adhd-mode .adhd-overlay-strip {
   /* Adjust the width of the focused strip */
   width: 400px;
 }
+
+/* Cognitive disability mode */
+
+body.cognitive-mode {
+  /* Use clear and simple language */
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+
+  /* Increase contrast */
+  background-color: #ffffff;
+  color: #333333;
+
+  /* Provide clear focus indicators */
+  outline: 2px solid #ff9900;
+  outline-offset: 2px;
+
+  /* Avoid text justification */
+  text-align: left;
+
+  /* Use consistent layout and navigation */
+  /* (Implement your website's consistent layout and navigation styles here) */
+
+  /* Disable animations and transitions */
+  transition: none !important;
+  animation: none !important;
+}
+
+body.cognitive-mode p,
+body.cognitive-mode li {
+  /* Increase line spacing */
+  line-height: 1.8;
+  margin-bottom: 1em;
+}
+
+body.cognitive-mode img,
+body.cognitive-mode video {
+  /* Provide alternative text or captions */
+  /* (Implement your website's alternative text and caption styles here) */
+}
+
+body.cognitive-mode h1,
+body.cognitive-mode h2,
+body.cognitive-mode h3,
+body.cognitive-mode h4,
+body.cognitive-mode h5,
+body.cognitive-mode h6 {
+  /* Highlight headings with a border */
+  border: 2px solid #ff9900;
+  padding: 5px;
+}
+
+body.cognitive-mode a {
+  /* Highlight links with a underline and a distinct color */
+  color: #0077cc;
+  text-decoration: underline;
+}
