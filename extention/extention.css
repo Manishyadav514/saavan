@@ -320,3 +320,23 @@ body.cognitive-mode a {
   color: #0077cc;
   text-decoration: underline;
 }
+
+
+
+
+
+
+body.keyboard-mode :focus {
+  /* Provide a clear focus outline */
+  outline: 2px solid #FF9900;
+  outline-offset: 2px;
+
+  /* Remove the default outline animation */
+  transition: none;
+}
+
+body.keyboard-mode a:focus {
+  /* Highlight focused links */
+  color: #0077CC;
+  text-decoration: underline;
+}

@@ -128,6 +128,58 @@ function toggleCognitiveMode() {
   document.getElementById("wcag-cognitive-mode").classList.toggle("active");
 }
 
+
+let keyboardModeEnabled = false;
+
+function toggleKeyboardMode() {
+    keyboardModeEnabled = !keyboardModeEnabled;
+    document.body.classList.toggle('keyboard-mode');
+
+    if (keyboardModeEnabled) {
+        enableKeyboardMode();
+    } else {
+        disableKeyboardMode();
+    }
+    document.getElementById("wcag-keyboard-mode").classList.toggle("active");
+    console.log("here now")
+}
+
+function enableKeyboardMode() {
+    document.addEventListener('keydown', handleKeyboardNavigation);
+}
+
+function disableKeyboardMode() {
+    document.removeEventListener('keydown', handleKeyboardNavigation);
+}
+
+function handleKeyboardNavigation(event) {
+    const focusableElements = Array.from(document.querySelectorAll('a[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])'))
+        .filter(el => !el.disabled && el.offsetWidth > 0 && el.offsetHeight > 0);
+
+    const currentIndex = focusableElements.indexOf(document.activeElement);
+
+    if (event.key === 'Tab') {
+        if (!event.shiftKey) {
+            if (currentIndex >= focusableElements.length - 1) {
+                focusableElements[0].focus();
+                event.preventDefault();
+            } else {
+                focusableElements[currentIndex + 1].focus();
+                event.preventDefault();
+            }
+        } else {
+            if (currentIndex <= 0) {
+                focusableElements[focusableElements.length - 1].focus();
+                event.preventDefault();
+            } else {
+                focusableElements[currentIndex - 1].focus();
+                event.preventDefault();
+            }
+        }
+    }
+}
+
+
 // Call functions to create elements and load CSS
 createWidget();
 loadCSS();
