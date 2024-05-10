@@ -299,24 +299,25 @@
         </div>
         <aside id="search" class="c-search">
           <div class="rbt" style="outline:none;position:relative" tabindex="-1">
-            <div style="display:flex;flex:1;height:100%;position:relative"><input autocomplete="off" placeholder=""
-                type="text" aria-autocomplete="both" aria-expanded="true" aria-haspopup="listbox"
-                aria-owns="site-search" role="combobox" class="rbt-input-main form-control rbt-input" value=""><input
-                aria-hidden="true" class="rbt-input-hint" readonly=""
-                style="background-color: transparent; border-color: transparent; box-shadow: none; color: rgba(0, 0, 0, 0.54); left: 0px; pointer-events: none; position: absolute; top: 0px; width: 100%; border-style: none; border-width: 0px; font-size: 15px; font-weight: 400; height: 40px; line-height: 15px; margin: 0px; padding: 7.7px 22px 13.2px;"
-                tabindex="-1" value=""></div>
+            <div style="display:flex;flex:1;height:100%;position:relative">
+              <input autocomplete="off" placeholder="Please search song, album, or artist"
+                     type="text" aria-autocomplete="both" aria-expanded="true" aria-haspopup="listbox"
+                     aria-owns="site-search" role="combobox" class="rbt-input-main form-control rbt-input">
+              <input aria-hidden="true" class="rbt-input-hint" readonly=""
+                     style="background-color: transparent; border-color: transparent; box-shadow: none; color: rgba(0, 0, 0, 0.54); left: 0px; pointer-events: none; position: absolute; top: 0px; width: 100%; border-style: none; border-width: 0px; font-size: 15px; font-weight: 400; height: 40px; line-height: 15px; margin: 0px; padding: 7.7px 22px 13.2px;">
+            </div>
             <div id="site-search" aria-label="menu-options" class="rbt-menu dropdown-menu show" role="listbox"
-              style="position: absolute; inset: 0px auto auto 0px; display: block; max-height: 300px; overflow: auto; transform: translate(0px, 40px); width: 538.406px;"
-              data-popper-reference-hidden="false" data-popper-escaped="true" data-popper-placement="bottom-start"><a
-                role="option" class="dropdown-item disabled" href="https://www.jiosaavn.com/#"></a></div>
+                 style="position: absolute; inset: 0px auto auto 0px; display: block; max-height: 300px; overflow: auto; transform: translate(0px, 40px); width: 538.406px;">
+              <a role="option" class="dropdown-item disabled" href="https://www.jiosaavn.com/#"></a>
+            </div>
           </div>
           <div class="c-search__list">
             <div class="o-layout o-layout--large@lg"></div>
-          </div><label class="c-search__label" for="site-search"><i class="c-search__icon o-icon-search"></i>
-            Search</label><span class="c-search__reset"><span class="u-color-js-green u-hidden@lg"><i
-                class="o-icon-close-fill o-icon--large"></i></span><strong
-              class="u-visible@lg">Clear</strong></span><span class="c-search__close"><i
-              class="o-icon-close-fill o-icon--large"></i></span>
+          </div>
+          <button aria-label="Search" class="c-search__label"><i class="c-search__icon o-icon-search"></i></button>
+          <span class="c-search__reset"><span class="u-color-js-green u-hidden@lg"><i
+                  class="o-icon-close-fill o-icon--large"></i></span><strong class="u-visible@lg">Clear</strong></span>
+          <span class="c-search__close"><i class="o-icon-close-fill o-icon--large"></i></span>
         </aside>
       </header>
       <div class="u-4/5-min-vh">
