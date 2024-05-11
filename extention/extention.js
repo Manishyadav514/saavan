@@ -96,7 +96,7 @@ function toggleADHDMode() {
   } else {
     disableADHDMode();
   }
-  document.getElementById("wcag-adhd-mode").classList.toggle("active");
+  // document.getElementById("wcag-adhd-mode").classList.toggle("active");
 }
 
 function enableADHDMode() {
@@ -121,7 +121,6 @@ function updateADHDOverlay(event) {
 //cognitive disability mode
 
 let cognitiveModeEnabled = false;
-
 function toggleCognitiveMode() {
   cognitiveModeEnabled = !cognitiveModeEnabled;
   document.body.classList.toggle("cognitive-mode");
