@@ -178,6 +178,78 @@ function handleKeyboardNavigation(event) {
     }
 }
 
+// seizure mode
+function applySeizureSafeProfile() {
+  // Suppress flashing or blinking animations
+  var elementsWithAnimations = document.querySelectorAll('*');
+  elementsWithAnimations.forEach(function(element) {
+      var computedStyle = window.getComputedStyle(element);
+      var animationDuration = computedStyle.getPropertyValue('animation-duration');
+      var animationDelay = computedStyle.getPropertyValue('animation-delay');
+
+      // Check if the element has animation properties
+      if (animationDuration !== '0s' || animationDelay !== '0s') {
+          // Suppress animations by setting animation duration and delay to 0
+          element.style.setProperty('animation-duration', '0s', 'important');
+          element.style.setProperty('animation-delay', '0s', 'important');
+      }
+  });
+
+  // Adjust color combinations to reduce risk of triggering seizures
+  // var allElements = document.querySelectorAll('*');
+  // allElements.forEach(function(element) {
+  //     // Example: Change background color to white and text color to black
+  //     element.style.setProperty('background-color', '#ffffff', 'important');
+  //     element.style.setProperty('color', '#000000', 'important');
+  // });
+}
+
+
+
+
+function suppressAnimations() {
+  // Select all elements with CSS animations
+  const animatedElements = document.querySelectorAll('*[style*="animation"], *[style*="transition"]');
+  
+  // Loop through each animated element
+  animatedElements.forEach(element => {
+      // Get the animation properties
+      const animationStyle = window.getComputedStyle(element);
+      const animationDuration = parseFloat(animationStyle.animationDuration) || 0;
+      const transitionDuration = parseFloat(animationStyle.transitionDuration) || 0;
+      const totalDuration = animationDuration + transitionDuration;
+
+      // Check if total animation duration is too fast (potentially harmful)
+      if (totalDuration < 0.5) {
+          // Disable animation by setting duration to 0
+          element.style.animationDuration = '0s';
+          element.style.transitionDuration = '0s';
+      }
+  });
+}
+
+// Function to customize color settings
+function customizeColors(bgColor, textColor, linkColor) {
+  // Set background color
+  document.body.style.backgroundColor = bgColor;
+  
+  // Set text color
+  document.body.style.color = textColor;
+  
+  // Set link color
+  const links = document.querySelectorAll('a');
+  links.forEach(link => {
+      link.style.color = linkColor;
+  });
+}
+
+
+// text color update
+function changeColor(color) {
+  document.body.style.setProperty('color', color, 'important');
+}
+
+
 
 // Call functions to create elements and load CSS
 createWidget();

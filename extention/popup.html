@@ -1,12 +1,16 @@
 <div class="wcag-popup-content">
   <div class="header">
     <button class="close" onclick="togglePopup()" type="button">
-      <svg height="22px" id="Layer_1" style="enable-background: new 0 0 512 512" version="1.1" viewBox="0 0 512 512"
-        width="22px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <svg fill="white" height="22px" id="Layer_1" style="enable-background: new 0 0 512 512" version="1.1"
+        viewBox="0 0 512 512" width="22px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
         <path
           d="M443.6,387.1L312.4,255.4l131.5-130c5.4-5.4,5.4-14.2,0-19.6l-37.4-37.6c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4  L256,197.8L124.9,68.3c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4L68,105.9c-5.4,5.4-5.4,14.2,0,19.6l131.5,130L68.4,387.1  c-2.6,2.6-4.1,6.1-4.1,9.8c0,3.7,1.4,7.2,4.1,9.8l37.4,37.6c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1L256,313.1l130.7,131.1  c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1l37.4-37.6c2.6-2.6,4.1-6.1,4.1-9.8C447.7,393.2,446.2,389.7,443.6,387.1z" />
       </svg>
     </button>
+  </div>
+  <div class="wcag-title">
+    <p>Select Accessibility Feature</p>
   </div>
 
   <div class="wcag-vertical-menu">
@@ -27,7 +31,15 @@
       </div>
       <p>Cognitive Mode</p>
     </div>
-    <div class="vertical-menu-content" onclick="toggleCognitiveMode()" id="wcag-seizure-mode">
+    <div class="vertical-menu-content" onclick="toggleKeyboardMode()" id="wcag-keyboard-mode">
+      <div class="button r" id="button-1">
+        <input type="checkbox" class="checkbox" />
+        <div class="knobs"></div>
+        <div class="layer"></div>
+      </div>
+      <p>Keyboard Navigation Mode</p>
+    </div>
+    <div class="vertical-menu-content" onclick="applySeizureSafeProfile()" id="wcag-seizure-mode">
       <div class="button r" id="button-1">
         <input type="checkbox" class="checkbox" />
         <div class="knobs"></div>
@@ -56,9 +68,34 @@
       </div> -->
 
 
-      <div class="wcag-container-grid-box" onclick="toggleKeyboardMode()" id="wcag-keyboard-mode">
+      <!-- <div class="wcag-container-grid-box" onclick="toggleKeyboardMode()" id="wcag-keyboard-mode">
         <p>Keyboard Navigation Mode</p>
-      </div>
+      </div> -->
     </div>
   </div>
+
+  <div class="wcag-vertical-menu">
+    <h1>Text Color Adjustment</h1>
+    <div>
+      <button onclick="changeColor('#0076B4')" data-color="#0076B4" class="wcag-color-picker__selection"
+        aria-label="Change Color to Blue" tabindex="0" style="background-color: rgb(0, 118, 180);"></button>
+      <button onclick="changeColor('#7A549C')" data-color="#7A549C" class="wcag-color-picker__selection"
+        aria-label="Change Color to Purple" tabindex="0" style="background-color: rgb(122, 84, 156);"></button>
+      <button onclick="changeColor('#C83733')" data-color="#C83733" class="wcag-color-picker__selection"
+        aria-label="Change Color to Red" tabindex="0" style="background-color: rgb(200, 55, 51);"></button>
+      <button onclick="changeColor('#D07021')" data-color="#D07021" class="wcag-color-picker__selection"
+        aria-label="Change Color to Orange" tabindex="0" style="background-color: rgb(208, 112, 33);"></button>
+      <button onclick="changeColor('#26999F')" data-color="#26999F" class="wcag-color-picker__selection"
+        aria-label="Change Color to Teal" tabindex="0" style="background-color: rgb(38, 153, 159);"></button>
+      <button onclick="changeColor('#4D7831')" data-color="#4D7831" class="wcag-color-picker__selection"
+        aria-label="Change Color to Green" tabindex="0" style="background-color: rgb(77, 120, 49);"></button>
+      <button onclick="changeColor('#ffffff')" data-color="#ffffff" class="wcag-color-picker__selection"
+        aria-label="Change Color to White" tabindex="0" style="background-color: rgb(255, 255, 255);"></button>
+      <button onclick="changeColor('#000000')" data-color="#000000" class="wcag-color-picker__selection"
+        aria-label="Change Color to Black" tabindex="0" style="background-color: rgb(0, 0, 0);"></button>
+      <button onclick="changeColor('#000000')" class="color-picker__cancel" tabindex="0">Cancel</button>
+    </div>
+
+  </div>
+
 </div>
