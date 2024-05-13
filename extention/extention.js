@@ -13,7 +13,7 @@ function createWidget() {
 
 function createImageButton(parentElement) {
   const img = document.createElement("img");
-  img.src = `${baseURL}/accessibility.png`;
+  img.src = `${baseURL}/brain.svg`;
   img.alt = "Accessibility Icon"; // Alternative text for accessibility
   img.classList.add("wcag-buttonImg"); // Add a class to the image (optional)
   img.type = "button";
